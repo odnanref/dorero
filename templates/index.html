@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>{{ .Title }}</title>
+		<link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+		<style type="text/css" media="all"><!--
+			html { height: 100%; font-size: 100%; background-color: hsl(0,0%,90%); color: #000; }
+			body { display: -moz-box; -moz-box-orient: vertical; width: 100%; height: 100%; margin: 0; background-image: url('bg.png'); font-family: Arial, freesans, sans-serif; }
+			a { color: #4183c4; text-decoration: none; }
+			h1 { font-family: 'Antic Slab', Helvetica, freesans, serif; font-size: 230%; }
+			p { font-family: Ubuntu, Helvetica, Arial, freesans, sans-serif; font-style: italic; }
+			.clear { clear: both; -moz-box-flex: 1; }
+			#main
+			{		
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-box-pack: center;
+				
+				display: -moz-box;
+				-moz-box-orient: vertical;
+				-moz-box-pack: center;
+				
+				display: box;
+				box-orient: vertical;
+				box-pack: center;
+				
+				width: 100%;
+				height: 100%;
+				background-color: transparent;
+				text-align: center;
+			}
+			#links
+			{
+				position: fixed;
+				left: 0; bottom: 0;
+				width: 100%;
+				padding: 12px;
+				background-color: #525c66;
+				border-top: 1px solid hsla(0,0%,0%,.03);
+				box-shadow: 0 1px 2px hsla(0,0%,0%,.02) inset, 0 -1px 0 hsla(0,0%,100%,.25);
+				text-align: center;
+			}
+			#links a
+			{
+				display: inline;
+				margin: 16px 1px;
+				padding: 10px 6px;
+				min-width: 88px;
+				max-width: 176px; max-height: 85px;
+				white-space: normal;
+				background: transparent;
+				border: 1px solid transparent;
+				border-radius: 2.5px;
+				color: #fff;
+				font-size: 80%;
+				text-align: center;
+				text-transform: lowercase;
+				transition-property: background-color, border-color, box-shadow;
+				transition-duration: 150ms;
+			}
+			#links a:hover
+			{
+				background-color: #c3c3c3;
+				border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.17) hsla(210,54%,20%,.2);
+			}
+			#links .separator
+			{
+				display: inline;
+				width: 1px;
+				min-height: 25px;
+				margin: 0 10px;
+				border-left: 1px solid #fff;
+			}
+		--></style>
+	</head>
+	<body>
+		<div class="clear"></div>
+		<div id="main">
+			<h1>netcrash</h1>
+			<p>{{ .Message }} not a snack food company.</p>
+		</div>
+		<div class="clear"></div>
+		<div id="links">
+			<a id="blog" href="http://netcrash.wordpress.com/">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABG0lEQVQ4jdWRr0sDUBRGzxtjDBlG
+UfEvGGI0yoJg0iAmo9EgwyjDZjYvDkQULCIWxSRGmZYlwSDYBMXgL/QYvIOHbKwJ3vbOe/e733cf
+/LtS19UNFYAUcAqoAa9AEbgBHoFp4B0oAVdAB3gIrbmU0klXtaSu+lNttaKW1UawM3VIRb0MVv9t
+raI+q5/qeLAR9UN9UYeDzYTASq98rbhcy9hxsOU4F0Kw2ktgNh6fZ+w02GEW97rfhgvqXcSYUEfV
+bfWpGyOGNLo9hVwgpfQF7AZfAhaBFnAAlIEFYB7Y6+kgXEyG5Qu1GZuvBTtS9/s2ZyLtiLGZRbsN
+Vh/Uj1qPidWMbeVf3K1iH40dYCyl1MlYE3hLKd0PdPCn9Q3SUyd/G6mCjwAAAABJRU5ErkJggg==">
+				Blog
+			</a>
+			<div class="separator"></div>
+			<a id="twitter" href="https://twitter.com/netriver">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA10lEQVQ4jdWSPQ4BURSFz0xEFKKa
+QhQKhSgVChprUFuESqHQWYHaAixAprQGrUYvQUSIREQ+xTzy8ubNtOKU993z3b8n/YWACtABKlYs
+lTQECh7zALiS6ALMgDkQuok7YAVEVqwEnEkrBmouIDaPJ1OlDbQ8ZoC+b84J8HASXxmA6sdnz9GT
+VHS4odI6Str7OqgDm4yKthYe6BeyzGkbM2IzD9AA1p5dfDTONBtABIxILuEuc4r7eSxj2SQcHOOT
+5LzdrKKBAwoltSRFku6StkEQ3HLb/rneQEpsWYqsRQoAAAAASUVORK5CYII=">
+				Twitter
+			</a>
+			<div class="separator"></div>
+			<a id="github" href="https://github.com/odnanref/">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABV0lEQVQ4jaWTsUqcURCFv1lEgiwS
+ln0IEcsgIZElRbD0ESyCLBZWIaRI4QtYpLS0zjMEGwWLFIEUgRCUBCxE1AQE0SUJXwqP8Cf7a+PA
+FDNz59wzc+6Fe1q1JdUJ4Akwk9QXYK+qft+JpqIuq4fqH/Ug/ks9UlfUO5vfqiN1Xe03aj31jXqp
+braC5OaR+iwN3UZtKrmFgAzHZg7t9cRr6k/1U/xMfZXaa/VYnWwCDDJzP/E7x203tekwfQ7QCcYM
+8L2qThM/alnTPEBVnQP7wGwT4IZJR50DPrQAfFTn1AdtCxxEql7UeKy+UC9Cf0Pt5Ww3Iyw2GewB
+p8BqVQFMAE+BK+ArsF1VP3J2CJwDO/+zWIlEC4n76jf1vbqU3HxYrbWNQR7JZaTqZeNT6kP1ZZq3
+1M4YQANkGJ1H6uf4SD3J+/in+bbPNAkMiFRcf6adqrpqvfk+9hcDxYCqgsMbNAAAAABJRU5ErkJg
+gg==">
+				github
+			</a>
+			<div class="separator"></div>
+			<a href="#">{{ .RemoteIP }}</a>
+		</div>
+	</body>
+</html>
