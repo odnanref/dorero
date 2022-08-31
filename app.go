@@ -22,7 +22,7 @@ func indexPage(w http.ResponseWriter, r *http.Request) {
 	var templates *template.Template	
 	templates = template.Must(templates.ParseGlob("templates/*.html"))
 	
-	var remoteIP = r.RemoteAddr
+	var remoteIP = r.Header.Get("X-Forwarded-For")
 
 	p := &Page{
 		Title: "Monkey Business",

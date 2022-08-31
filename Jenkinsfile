@@ -6,10 +6,6 @@ pipeline {
             steps {
                 echo 'Building..'
                 
-                script {
-                    def customImage = docker.build("registry.service.consul:5000/dorero")
-                    customImage.push()
-                }
             }
         }
         stage('Test') {
@@ -20,6 +16,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                script {
+                    def customImage = docker.build("registry.service.consul:5000/dorero")
+                    customImage.push()
+                }
             }
         }
     }
