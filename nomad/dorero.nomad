@@ -140,7 +140,7 @@ job "dorero" {
     # The "count" parameter specifies the number of the task groups that should
     # be running under this group. This value must be non-negative and defaults
     # to 1.
-    count = 1
+    count = 2
 
     # The "network" stanza specifies the network configuration for the allocation
     # including requesting port bindings.
@@ -235,7 +235,7 @@ job "dorero" {
     #
     #     https://www.nomadproject.io/docs/job-specification/ephemeral_disk
     #
-    ephemeral_disk {
+    #ephemeral_disk {
       # When sticky is true and the task group is updated, the scheduler
       # will prefer to place the updated allocation on the same node and
       # will migrate the data. This is useful for tasks that store data
@@ -248,8 +248,8 @@ job "dorero" {
       #
       # The "size" parameter specifies the size in MB of shared ephemeral disk
       # between tasks in the group.
-      size = 300
-    }
+    #  size = 300
+    #}
 
     # The "affinity" stanza enables operators to express placement preferences
     # based on node attributes or metadata.
@@ -368,8 +368,8 @@ job "dorero" {
       #     https://www.nomadproject.io/docs/job-specification/resources
       #
       resources {
-        cpu    = 500 # 500 MHz
-        memory = 156 # 256MB
+        cpu    = 150 # 50 MHz
+        memory = 50 # 15MB
       }
 
 
