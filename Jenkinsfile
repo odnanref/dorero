@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 script {
-                    def customImage = docker.build("registry.service.consul:5000/dorero")
+                    def customImage = docker.build("https://registry.service.consul/dorero")
                     customImage.push()
                 }
             }
