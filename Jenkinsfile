@@ -21,9 +21,11 @@ pipeline {
                 echo 'Pushing like a pregnant woman...'
                 container('dind') {
 		   script {
-                    def customImage = docker.build("registry.service.consul/dorero", 'docker-registry-personal')
+		    docker.withRegistry("https://registry.service.consul", "docker-registry-personal") {
+                    def customImage = docker.build("dorero:${env.BUILD_ID}")
                     customImage.push()
                     }
+		   }
                 }
             }
         }
