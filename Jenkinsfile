@@ -18,10 +18,12 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
-                script {
+                echo 'Pushing like a pregnant woman...'
+                container('dind') {
+		   script {
                     def customImage = docker.build("https://registry.service.consul/dorero", 'docker-registry-personal')
                     customImage.push()
+                    }
                 }
             }
         }
