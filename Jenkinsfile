@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent "dind"
 
     stages {
         stage('Build') {
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 script {
-                    def customImage = docker.build("https://registry.service.consul/dorero")
+                    def customImage = docker.build("https://registry.service.consul/dorero", 'docker-registry-personal')
                     customImage.push()
                 }
             }
